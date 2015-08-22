@@ -3,14 +3,10 @@ package;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
-import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.math.FlxPoint;
 import flixel.math.FlxVector;
 import flixel.plus.FlxPlus;
 import flixel.text.FlxText;
-import flixel.tweens.FlxTween;
-import flixel.ui.FlxButton;
-import flixel.math.FlxMath;
 import flixel.util.FlxTimer;
 
 /**
@@ -111,7 +107,10 @@ class PlayState extends FlxState
 					var hs = FlxG.save.data.highscore;
 					text.text = Reg.score > hs ? "NEW HIGHSCORE!!!" : 'HIGHSCORE: $hs';
 					if (Reg.score > hs)
+					{
 						FlxG.save.data.highscore = Reg.score;
+						FlxG.save.flush();
+					}
 					add(text);
 					canRestart = true;
 				} );

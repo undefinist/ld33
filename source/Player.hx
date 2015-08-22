@@ -3,7 +3,6 @@ package;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.plus.FlxPlus;
-import flixel.util.FlxSignal.FlxTypedSignal;
 
 /**
  * ...

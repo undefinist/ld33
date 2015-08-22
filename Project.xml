@@ -2,7 +2,7 @@
 <project>
 	<!------------------------------APPLICATION SETTINGS---------------------------->
 
-	<app title="adventure-train-game" file="adventure-train-game" main="Main" version="0.0.1" company="HaxeFlixel" />
+	<app title="pyinpyang" file="pyin-pyang-game" main="Main" version="1.0.0" company="Undefinist Games" />
 
 	<!--The flixel preloader is not accurate in Chrome. You can use it regularly if you embed the swf into a html file
 	<!--or you can set the actual size of your file manually at "FlxPreloaderBase-onUpdate-bytesTotal"!-->
@@ -29,6 +29,7 @@
 
 	<set name="BUILD_DIR" value="export" />
 	<classpath name="source" />
+	<classpath name="source/states" />
 		
 	<assets path="assets" exclude="*.ase" />
 		

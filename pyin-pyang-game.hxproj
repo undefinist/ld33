@@ -20,6 +20,7 @@
     <class path="C:\HaxeToolkit\haxe\lib\lime\2,5,3" />
     <class path="C:\HaxeToolkit\haxe\lib\openfl\3,3,0" />
     <class path="source" />
+    <class path="source\states" />
     <class path="export\flash\haxe" />
   </classpaths>
   <!-- Build options -->
