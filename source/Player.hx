@@ -67,6 +67,11 @@ class Player extends FlxSprite
 			state = 0;
 		}
 		
+		if (y > FlxG.height - 16)
+			y = FlxG.height - 16;
+		else if (y < 0)
+			y = 0;
+		
 		health -= elapsed * 2;
 		velocity.x += elapsed * 4;
 		

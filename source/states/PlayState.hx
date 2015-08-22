@@ -95,6 +95,13 @@ class PlayState extends FlxState
 			FlxPlus.playPersistingSound("over", 0.75);
 			gameOver = true;
 			
+			var hs = FlxG.save.data.highscore;
+			if (Reg.score > hs)
+			{
+				FlxG.save.data.highscore = Reg.score;
+				FlxG.save.flush();
+			}
+			
 			new FlxTimer().start(1 * 0.25, function(_):Void {
 				var text:FlxText = new FlxText(0, FlxG.height / 2 - 16, FlxG.width, "GAME OVER", 16);
 				text.setBorderStyle(OUTLINE, 0xff000000);
@@ -104,13 +111,7 @@ class PlayState extends FlxState
 					text = new FlxText(0, FlxG.height / 2 + 12, FlxG.width, "", 16);
 					text.setBorderStyle(OUTLINE, 0xff000000);
 					text.alignment = "center";
-					var hs = FlxG.save.data.highscore;
 					text.text = Reg.score > hs ? "NEW HIGHSCORE!!!" : 'HIGHSCORE: $hs';
-					if (Reg.score > hs)
-					{
-						FlxG.save.data.highscore = Reg.score;
-						FlxG.save.flush();
-					}
 					add(text);
 					canRestart = true;
 				} );
